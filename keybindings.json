@@ -1,0 +1,57 @@
+[
+    {
+        "key": "space l",
+        "command": "workbench.files.action.focusOpenEditorsView",
+        "when": "neovim.mode != insert || filesExplorerFocus"
+    },
+    {
+        "key": "space o",
+        "command": "workbench.files.action.focusFilesExplorer",
+        "when": "neovim.mode != insert || openEditorsFocus"
+    },
+    {
+        "key": "space g",
+        "command": "workbench.action.findInFiles",
+        "when": "neovim.mode != insert || searchResultListFocused"
+    },
+    {
+        "key": "space l",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "neovim.mode != insert && openEditorsFocus"
+    },
+    {
+        "key": "space o",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "neovim.mode != insert && filesExplorerFocus"
+    },
+    {
+        "key": "space g",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "neovim.mode != insert && searchInputBoxFocus"
+    },
+    {
+        "key": "space f",
+        "command": "workbench.action.quickOpen",
+        "when": "neovim.mode != insert || (searchViewletVisible && searchViewletFocus)"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "search.action.focusSearchList",
+        "when": "searchViewletVisible && searchInputBoxFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "search.action.focusSearchList",
+        "when": "searchViewletVisible && searchInputBoxFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "list.focusUp",
+        "when": "searchViewletVisible && searchResultListFocused"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "list.focusDown",
+        "when": "searchViewletVisible && searchResultListFocused"
+    }
+]
