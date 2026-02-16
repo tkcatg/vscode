@@ -1,38 +1,45 @@
 [
+    // TODO: terminalmode.
+    // TODO: SPACE doesn't work in operator-pending mode.
     {
         "key": "space l",
-        "command": "workbench.files.action.focusOpenEditorsView",
-        "when": "neovim.mode != insert || filesExplorerFocus"
-    },
-    {
-        "key": "space o",
-        "command": "workbench.files.action.focusFilesExplorer",
-        "when": "neovim.mode != insert || openEditorsFocus"
-    },
-    {
-        "key": "space g",
-        "command": "workbench.action.findInFiles",
-        "when": "neovim.mode != insert || searchResultListFocused"
+        "command": "workbench.files.action.focusOpenEditorsView", // open
+        "when": "neovim.mode != insert && ( filesExplorerFocus || editorFocus )"
     },
     {
         "key": "space l",
-        "command": "workbench.action.toggleSidebarVisibility",
+        "command": "workbench.action.toggleSidebarVisibility", // close
         "when": "neovim.mode != insert && openEditorsFocus"
     },
     {
         "key": "space o",
-        "command": "workbench.action.toggleSidebarVisibility",
+        "command": "workbench.files.action.focusFilesExplorer", // open
+        "when": "neovim.mode != insert && ( openEditorsFocus || editorFocus )"
+    },
+    {
+        "key": "space o",
+        "command": "workbench.action.toggleSidebarVisibility", // close
         "when": "neovim.mode != insert && filesExplorerFocus"
     },
     {
+        "key": "space f",
+        "command": "workbench.action.quickOpen", // open
+        "when": "neovim.mode != insert && (editorFocus || openEditorsFocus || filesExplorerFocus )"
+    },
+    {
         "key": "space g",
-        "command": "workbench.action.toggleSidebarVisibility",
+        "command": "workbench.action.findInFiles", // open
+        "when": "neovim.mode != insert && (editorFocus || openEditorsFocus || filesExplorerFocus )"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.toggleSidebarVisibility", // close
         "when": "neovim.mode != insert && searchInputBoxFocus"
     },
     {
-        "key": "space f",
-        "command": "workbench.action.quickOpen",
-        "when": "neovim.mode != insert || (searchViewletVisible && searchViewletFocus)"
+        "key": "escape",
+        "command": "workbench.action.findInFiles", // move focus
+        "when": "neovim.mode != insert && searchResultListFocused"
     },
     {
         "key": "ctrl+p",
