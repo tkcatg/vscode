@@ -6,5 +6,5 @@
     "extensions.experimental.affinity": { "asvetliakov.vscode-neovim": 1 },
     "vscode-neovim.neovimExecutablePaths.win32": "C:\\Neovim\\bin\\nvim.exe",
     "vscode-neovim.neovimInitVimPaths.win32": "%LOCALAPPDATA%\\nvim\\init.lua",
-    "vscode-neovim.compositeKeys": { ",.": { "command": "vscode-neovim.escape" } },
+    "vscode-neovim.compositeKeys": { "jj": { "command": "vscode-neovim.escape" } },
 }
