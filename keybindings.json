@@ -29,7 +29,7 @@
     {
         "key": "space g",
         "command": "workbench.action.findInFiles", // open
-        "when": "neovim.mode != insert && (editorFocus || openEditorsFocus || filesExplorerFocus )"
+        "when": "neovim.mode != insert && (editorFocus || openEditorsFocus || filesExplorerFocus || searchResultListFocused)"
     },
     {
         "key": "escape",
